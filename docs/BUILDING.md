@@ -9,7 +9,13 @@ vendor/ffmpeg/include、lib、bin：FFmpeg LGPL shared Windows x64 开发包
 vendor/sqlite/sqlite3.c、sqlite3.h：SQLite amalgamation 3.53.4
 vendor/json.hpp：nlohmann JSON 3.12.0
 
-依赖未写入源代码仓库。tools/dependencies.json 记录本次依赖版本和压缩包校验值；NDI 请从已安装官方 SDK 复制。不要混用不同版本的 FFmpeg 头文件、导入库和 DLL。
+依赖未写入源代码仓库。tools/dependencies.json 记录本次依赖版本和压缩包校验值。
+
+## 依赖自动获取（CI 与本机通用）
+
+    powershell -ExecutionPolicy Bypass -File tools/fetch-deps.ps1
+
+脚本按 dependencies.json 下载并校验全部 vendor 依赖，已存在的依赖自动跳过：FFmpeg 精确归档来自本仓库 deps-vendor Release（上游 latest 链接内容滚动变化）；SQLite、ImGui、nlohmann JSON 来自上游；NDI 官方安装程序经 innounp 免安装解包，仅取头文件与运行库（innounp 为 GPL 工具，不入库、不随发布分发）。也可以按上方依赖布局手工准备，NDI 请从已安装官方 SDK 复制。不要混用不同版本的 FFmpeg 头文件、导入库和 DLL。
 
 FFmpeg 本机版本 n8.1.2-54-gc573a95381-20260919，来自 BtbN LGPL shared 构建。
 原始下载 URL 使用 latest，现有 SHA256 锁定本次归档；今后 URL 内容改变时必须显式更新依赖并重新验收，不能静默替换。

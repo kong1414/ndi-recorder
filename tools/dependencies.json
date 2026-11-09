@@ -5,7 +5,9 @@
     "source": "https://github.com/FFmpeg/FFmpeg/tree/c573a95381",
     "license": "LGPL-3.0-or-later",
     "version": "n8.1.2-54-gc573a95381-20260919",
-    "build": "https://github.com/BtbN/FFmpeg-Builds"
+    "build": "https://github.com/BtbN/FFmpeg-Builds",
+    "downloadUrl": "https://github.com/kong1414/ndi-recorder/releases/download/deps-vendor/ffmpeg.zip",
+    "downloadNote": "上游 latest 链接内容滚动变化，精确归档托管在本仓库 deps-vendor Release；更换版本需重新验收"
   },
   "sqlite": {
     "url": "https://www.sqlite.org/2026/sqlite-amalgamation-3530400.zip",
@@ -15,14 +17,28 @@
   "ndi": {
     "origin": "Local official NDI 6 SDK installation",
     "version": "6.3.2",
-    "runtimeSha256": "2B6602075868BA4401F82F417D72424805D69B11CA86078023D0D489FF45DD84"
+    "runtimeSha256": "2B6602075868BA4401F82F417D72424805D69B11CA86078023D0D489FF45DD84",
+    "installerUrl": "https://downloads.ndi.tv/SDK/NDI_SDK/NDI%206%20SDK.exe",
+    "installerSha256": "4D5DD36A1C7C7634F408BF459B068787CCE6F5310A3EFE832D76D1DDEB54E499",
+    "installerNote": "官方安装程序经 innounp 免安装解包，仅取 Include 头文件与 Bin/x64 运行库"
   },
   "imgui": {
     "url": "https://github.com/ocornut/imgui/tree/v1.92.9b",
-    "version": "1.92.9b"
+    "version": "1.92.9b",
+    "archiveUrl": "https://github.com/ocornut/imgui/archive/refs/tags/v1.92.9b.zip"
   },
   "json": {
     "url": "https://github.com/nlohmann/json/tree/v3.12.0",
-    "version": "3.12.0"
+    "version": "3.12.0",
+    "headerUrl": "https://raw.githubusercontent.com/nlohmann/json/v3.12.0/single_include/nlohmann/json.hpp",
+    "sha256": "AAF127C04CB31C406E5B04A63F1AE89369FCCDE6D8FA7CDDA1ED4F32DFC5DE63",
+    "licenseUrl": "https://raw.githubusercontent.com/nlohmann/json/v3.12.0/LICENSE.MIT",
+    "licenseSha256": "46A65CFFD1EA955132D95A8DD921640714A8D6B537D2E4E482D31145AE95B603"
+  },
+  "innounp": {
+    "url": "https://downloads.sourceforge.net/project/innounp/innounp/innounp%200.50/innounp050.rar",
+    "version": "0.50",
+    "sha256": "1D8837540CCC15D98245A1C73FD08F404B2A7BDFE7DC9BED2FDECE818FF6DF67",
+    "note": "仅 CI 解包 NDI 安装程序使用，不入库、不随发布分发"
   }
 }
