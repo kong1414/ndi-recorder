@@ -1,0 +1,20 @@
+# 构建与发布产物
+/build/
+/dist/
+
+# 第三方依赖（按 docs/BUILDING.md 准备，不入库）
+/vendor/
+
+# 运行时数据与录像
+/data/
+/recordings/
+/diagnostics/
+/test-data/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# IDE / 其他
+*.user
+.vs/

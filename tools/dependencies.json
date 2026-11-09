@@ -1,0 +1,28 @@
+{
+  "ffmpeg": {
+    "sha256": "062F6220BADDBB3EF01E6A818C3A218EF28650FB68155499991EB7C60C4C421D",
+    "archive": "ffmpeg-n8.1-latest-win64-lgpl-shared-8.1.zip",
+    "source": "https://github.com/FFmpeg/FFmpeg/tree/c573a95381",
+    "license": "LGPL-3.0-or-later",
+    "version": "n8.1.2-54-gc573a95381-20260919",
+    "build": "https://github.com/BtbN/FFmpeg-Builds"
+  },
+  "sqlite": {
+    "url": "https://www.sqlite.org/2026/sqlite-amalgamation-3530400.zip",
+    "version": "3.53.4",
+    "sha256": "1E71DDF93849C6A6ECF58B827C0692073D2DD7EE40196158068F7B29F422E87D"
+  },
+  "ndi": {
+    "origin": "Local official NDI 6 SDK installation",
+    "version": "6.3.2",
+    "runtimeSha256": "2B6602075868BA4401F82F417D72424805D69B11CA86078023D0D489FF45DD84"
+  },
+  "imgui": {
+    "url": "https://github.com/ocornut/imgui/tree/v1.92.9b",
+    "version": "1.92.9b"
+  },
+  "json": {
+    "url": "https://github.com/nlohmann/json/tree/v3.12.0",
+    "version": "3.12.0"
+  }
+}

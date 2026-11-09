@@ -1,0 +1,29 @@
+#include <windows.h>
+#include "version.h"
+IDI_RECORDER ICON "@CMAKE_SOURCE_DIR@/assets/app-icon.ico"
+1 VERSIONINFO
+ FILEVERSION @APP_YEAR@,@APP_MONTH@,@APP_DAY@,0
+ PRODUCTVERSION @APP_YEAR@,@APP_MONTH@,@APP_DAY@,0
+ FILEFLAGSMASK 0x3fL
+ FILEFLAGS 0
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+ FILESUBTYPE 0
+BEGIN
+ BLOCK "StringFileInfo"
+ BEGIN
+  BLOCK "040904b0"
+  BEGIN
+   VALUE "FileDescription", "NDI Recorder"
+   VALUE "FileVersion", "@APP_VERSION@"
+   VALUE "InternalName", "ndi-recorder"
+   VALUE "OriginalFilename", "ndi-recorder.exe"
+   VALUE "ProductName", "NDI Recorder"
+   VALUE "ProductVersion", "@APP_VERSION@"
+  END
+ END
+ BLOCK "VarFileInfo"
+ BEGIN
+  VALUE "Translation", 0x0409, 1200
+ END
+END
